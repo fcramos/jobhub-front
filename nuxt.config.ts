@@ -12,4 +12,9 @@ export default defineNuxtConfig({
       "process.env.DEBUG": false,
     },
   },
+  runtimeConfig: {
+    public: {
+      API_HOST: process.env.API_HOST,
+    },
+  },
 });
