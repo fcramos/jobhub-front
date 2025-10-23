@@ -5,9 +5,7 @@ export const api = $fetch.create({
   onRequest({ options }) {
     // Get baseURL inside the request context
     const config = useRuntimeConfig();
-    if (!options.baseURL) {
-      options.baseURL = config.public.API_HOST;
-    }
+    options.baseURL = config.public.API_HOST;
 
     const { token } = useAuth();
     if (token.value) {
